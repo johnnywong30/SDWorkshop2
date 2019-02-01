@@ -8,22 +8,22 @@ K01 -- ...and I want to Paint It Better
 // instantiate canvas
 var canvas = document.getElementById('slate');
 var ctx = canvas.getContext("2d");
-var drawStyle = 'rectangle';
+var drawStyle = 'box';
 
 // make canvas fill and stroke red
 ctx.fillStyle = '#ff0000';
 ctx.strokeStyle = '#ff0000';
 
-// toggles between drawing a rectangle or dot on mouse click within the canvas
-// default style is drawing a rectangle
+// toggles between drawing a box or dot on mouse click within the canvas
+// default style is drawing a box
 var toggle = function (e) {
   var status = document.getElementById('state').innerHTML;
-  if (status == 'Current Drawing State: Rectangle'){
+  if (status == 'Current Drawing State: Box'){
       document.getElementById('state').innerHTML = 'Current Drawing State: Dot';
       drawStyle = 'dot';
   }else{
-      document.getElementById('state').innerHTML = 'Current Drawing State: Rectangle';
-      drawStyle = 'rectangle';
+      document.getElementById('state').innerHTML = 'Current Drawing State: Box';
+      drawStyle = 'box';
   }
   console.log(document.getElementById('state').innerHTML);
 };
@@ -50,7 +50,7 @@ var toggleButton = document.getElementById('toggle');
 toggleButton.addEventListener('click', toggle);
 
 
-// draw rectangle/dot, with origin at mouse click
+// draw box/dot, with origin at mouse click
 var draw = function (e) {
   // e.offsetX and e.offsetY are the (x, y) coordinates that the mouse clicked on within the canvas
   // the coordinates are in respect to the canvas
@@ -58,7 +58,7 @@ var draw = function (e) {
   var yCord = e.offsetY;
   // formatting using back tick string
   console.log(`Coordinates: (${xCord}, ${yCord})`);
-  if (drawStyle == 'rectangle'){
+  if (drawStyle == 'box'){
     ctx.fillRect(xCord, yCord, 80, 80);
   }else{
     // drawing an ellipse requires beginPath for the rendering context to
