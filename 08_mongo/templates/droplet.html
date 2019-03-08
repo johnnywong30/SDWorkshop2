@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+  <form action='/ip' method='POST'>
+    IP of Droplet: <input type='text' name='droplet' placeholder='0.0.0.0' required>
+    <input type='submit' value='submit'>
+  </form>
+  <br>
+  {% if dropped %}
+    {% block search %}
+
+    {% endblock %}
+  {% endif %}
+{% endblock %}

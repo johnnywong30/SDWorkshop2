@@ -1,0 +1,31 @@
+{% extends 'query.html' %}
+{% block results %}
+  <br>
+  <table>
+  <tr>
+    <th> Dex Num </th>
+    <th> Pokemon </th>
+    <th> Type </th>
+    <th> HP </th>
+    <th> ATK </th>
+    <th> DEF </th>
+    <th> Sp. ATK </th>
+    <th> Sp. DEF </th>
+    <th> SPD </th>
+  </tr>
+
+  {% for pokemon in collection %}
+    <tr>
+      <td> {{pokemon['id']}} </td>
+      <td> {{pokemon['pokemon']}} </td>
+      <td> {{pokemon['type']}} </td>
+      <td> {{pokemon['stats']['HP']}} </td>
+      <td> {{pokemon['stats']['Attack']}} </td>
+      <td> {{pokemon['stats']['Defense']}} </td>
+      <td> {{pokemon['stats']['Sp Attack']}} </td>
+      <td> {{pokemon['stats']['Sp Defense']}} </td>
+      <td> {{pokemon['stats']['Speed']}} </td>
+    </tr>
+  {% endfor %}
+  </table>
+{% endblock %}

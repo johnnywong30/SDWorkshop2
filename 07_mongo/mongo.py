@@ -73,25 +73,31 @@ def pokemon_stat(stat, value):
     Return query of Pokemon with <stat> with a value >= to <value>
     '''
     poke_dict = {'pokemon': '', 'id': 0, 'type': [], 'stats': {} }
-    for pokemon in collection.find({'base.{0}'.format(stat): {'$gte': value}}):
+    key = 'base.{0}'.format(stat)
+    for pokemon in collection.find({key: {'$gte': value}}):
         poke_dict['pokemon'] = pokemon['name']['english']
         poke_dict['id'] = pokemon['id']
         poke_dict['type'] = pokemon['type']
         poke_dict['stats'] = pokemon['base']
         print(poke_dict)
         print()
-
+    print(key)
 
 
 # TESTS
+
+'''
 print('Query for Grass type Pokemon')
 pokemon_type('Grass')
 print('------------------------------')
 print('Query for Dragonite')
 pokemon_name('Dragonite')
 print('------------------------------')
+
+
+print('Query for Pokemon up to #381')
+pokemon_id(381)
+'''
 print('Query for Pokemon with HP >= 50')
 pokemon_stat('HP', 50)
 print('------------------------------')
-print('Query for Pokemon up to #381')
-pokemon_id(381)
