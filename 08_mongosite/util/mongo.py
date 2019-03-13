@@ -35,7 +35,8 @@ def setup_db(ip):
     collection = db.pokedex
 
     with open('data/pokedex.json') as f:
-        documents = loads(f.read().replace('Sp.', 'Sp'))
+        #documents = loads(f.read().replace('Sp.', 'Sp'))
+        documents = loads(f.read())
     collection.insert_many(documents)
     print(collection.count_documents({}))
     return collection
