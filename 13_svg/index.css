@@ -1,0 +1,16 @@
+/*
+Johnny Wong
+SoftDev2 pd8
+K13 -- Diving Deeper Into D3
+2019-03-20
+*/
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
