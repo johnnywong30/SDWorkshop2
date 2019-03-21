@@ -1,0 +1,16 @@
+/*
+Johnny Wong
+SoftDev2 pd8
+K14 -- Learning to Swim
+2019-03-21
+*/
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
