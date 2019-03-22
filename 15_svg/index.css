@@ -1,0 +1,22 @@
+/*
+Johnny Wong
+SoftDev2 pd8
+K15 -- Scattered
+2019-03-22
+*/
+
+svg{
+  padding-top: 50;
+  font-size: 20px;
+}
+
+.axis path,
+.axis line{
+  fill: none;
+  stroke: black;
+}
+
+.axis text{
+  font-family: sans-serif;
+  font-size:15px;
+}
