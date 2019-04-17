@@ -1,7 +1,7 @@
 '''
 PapaGooyens -- Aaron Li & Johnny Wong
 SoftDev2 pd8
-K19 --
+K19 -- Ready, Set, Math!
 2019-04-16
 '''
 testa = [1, 2, 3]
@@ -14,7 +14,7 @@ Union of sets A & B denoted A u B
 '''
 
 def union(a, b):
-    return a 5+ [i for i in b if i not in a]
+    return a + [i for i in b if i not in a]
 
 print("Union:")
 print(union(testa, testb))
@@ -50,9 +50,3 @@ def cartProduct(a, b):
     return [(x, y) for x in a for y in b]
 print("Cartesian Product:")
 print(cartProduct(c, d))
-
-'''
-string set intersex
-'''
-# def strSect(a, b):
-#     return [i for i in ]
