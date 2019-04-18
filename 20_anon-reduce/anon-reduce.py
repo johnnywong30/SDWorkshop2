@@ -29,8 +29,8 @@ Return most frequent word in Tragedy of Romeo and Juliet
 def mostFreq():
     with open(TEXT) as f:
         text = f.read().lower()
-    words = {i for i in text.split()} # set comprehension
-    mostFreqWord = reduce(lambda a, b: a if text.count(a) > text.count(b) else b, words)
+    words = list(set(text.split())) # words list without dupes
+    mostFreqWord = reduce(lambda a, b: a if text.split().count(a) > text.split().count(b) else b, words)
     return mostFreqWord, text.count(mostFreqWord)
 
-print(mostFreq()) # --> 'o', 10269???
+print(mostFreq()) # --> 'the', 1570
