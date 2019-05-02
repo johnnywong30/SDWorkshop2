@@ -26,4 +26,5 @@ def fib(n):
 
 print(fib(5))
 print(fib(9))
-print(fib(10))
+# huge difference between computation speed from pure recursion to memoization
+print(fib(500))
