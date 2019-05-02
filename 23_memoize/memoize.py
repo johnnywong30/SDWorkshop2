@@ -1,7 +1,7 @@
 '''
 Johnny Wong
 SoftDev2 pd8
-K#23 -- Closure
+K#23 -- Memoize
 2019-05-01
 '''
 
